@@ -14,10 +14,7 @@ const initApp = (): void => {
     e.preventDefault();
     const input = document.getElementById("newItem") as HTMLInputElement;
     const newEntryText: string = input.value.trim();
-
-    if (!newEntryText.length) {
-      return;
-    }
+    if (!newEntryText.length) return;
 
     const itemId: number = fullList.list.length
       ? parseInt(fullList.list[fullList.list.length - 1].id) + 1
